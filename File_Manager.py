@@ -5,30 +5,36 @@ import os.path
 class Data():
     def __init__(self):
         self.read_training_data()
-        self.clean_kama()  # adjusts data to only have to classifications, kama or not
-        self.clean_rosa()
-        self.clean_canadian()
-
-
+        self.kama_targ = self.clean_kama()
+        self.rosa_targ = self.clean_rosa()
+        self.canadian_targ = self.clean_canadian()
 
     def clean_kama(self):
-        print(self.targets_or)
-        self.kama_targ = self.targets_or
-        for i in range(len(self.kama_targ)):
-            if self.kama_targ[i] != 1:
-                self.kama_targ[i] = 0
+        list_ = []
+        for i in range(len(self.targets_or)):
+            if self.targets_or[i] != 1:
+                list_.append(-1)
+            else:
+                list_.append(1)
+        return list_
 
     def clean_rosa(self):
-        self.rosa_targ = self.targets_or
-        for i in range(len(self.rosa_targ)):
-            if self.rosa_targ[i] != 1:
-                self.rosa_targ[i] = 0
+        list_ = []
+        for i in range(len(self.targets_or)):
+            if self.targets_or[i] != 2:
+                list_.append(-1)
+            else:
+                list_.append(1)
+        return list_
 
     def clean_canadian(self):
-        self.canadian_targ = self.targets_or
-        for i in range(len(self.canadian_targ)):
-            if self.canadian_targ[i] != 1:
-                self.canadian_targ[i] = 0
+        list_ = []
+        for i in range(len(self.targets_or)):
+            if self.targets_or[i] != 3:
+                list_.append(-1)
+            else:
+                list_.append(1)
+        return list_
 
 
     def read_training_data(self):
@@ -37,6 +43,7 @@ class Data():
         colnames = ['area', 'perimeter', 'compactness', 'length', 'width', 'asymmetry coefficient', 'length of kernel groove', 'class']
         self.data = pandas.read_csv(path, names=colnames)
         self.tr_data = self.data.drop(columns='class')
+        self.tr_data.insert(0, 'bias', 1)
         self.tr_data = self.tr_data.values
         self.targets_or = self.data['class'].tolist()
         #self.targets_or = self.targets_or.values
@@ -52,4 +59,6 @@ class Data():
 
 
 # d = Data()
-# print(d.kama_targ)
+# print(len(d.targets_or))
+# print(len(d.kama_targ))
+# print("rosa targs", d.rosa_targ)
