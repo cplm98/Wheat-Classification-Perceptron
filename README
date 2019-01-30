@@ -1,1 +1,4 @@
 CMPE 452 Assignment 1
+
+Design a Perceptron to classify three types of wheat seed using up to 7 characteristics.
+Design the Perceptron from scratch and then using tools validate your results

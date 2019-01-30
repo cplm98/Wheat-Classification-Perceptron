@@ -1,0 +1,80 @@
+
+Test Results
+
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 3, Original Class: 1
+Predicted Class: 3, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 1, Original Class: 1
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 1, Original Class: 2
+Predicted Class: 1, Original Class: 2
+Predicted Class: 2, Original Class: 2
+Predicted Class: 1, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: 1, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: 1, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: 1, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: [1, 1], Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: [1, 1], Original Class: 3
+Predicted Class: 3, Original Class: 3
+Predicted Class: 3, Original Class: 3
+Rosa Initial Weights: [0.04580827877767303, 0.8551006112333999, -0.8902889038550774, 0.6610592299950203, -0.42768545608810155, -0.40191154175898064, 0.22989271835220204, 0.40910992018757086]
+Rosa Trained Weights: [0.04580827877767303, 0.8551006112333999, -0.8902889038550774, 0.6610592299950203, -0.42768545608810155, -0.40191154175898064, 0.22989271835220204, 0.40910992018757086]
+Canadian Initial Weights: [0.6979753623679005, -0.5547734968857714, 0.15559410174543187, 0.4302841352009305, 0.22995597520043015, -0.06945913051773762, 0.11293876338830884, 0.46961034225266124]
+Canadian Trained Weights: [0.6979753623679005, -0.5547734968857714, 0.15559410174543187, 0.4302841352009305, 0.22995597520043015, -0.06945913051773762, 0.11293876338830884, 0.46961034225266124]
+
+The total number of training iterations was 1000 
+An accuracy threshold could have also been used to avoid 'over training'
+but the number of correctly classified seeds increased up to 1000 epochs. 
+This justifies iterations over the threshold in this scenario. 
+
+
+SKLearn Tool
+Training accuracy: 0.81
+Testing accuracy: 0.80
+Confusion Matrix from SKLearn Tool: 
+[[10  0  5]
+ [ 0 12  3]
+ [ 1  0 14]]
+Precision and Recall: 
+              precision    recall  f1-score   support
+
+           1       0.91      0.67      0.77        15
+           2       1.00      0.80      0.89        15
+           3       0.64      0.93      0.76        15
+
+   micro avg       0.80      0.80      0.80        45
+   macro avg       0.85      0.80      0.80        45
+weighted avg       0.85      0.80      0.80        45
+
+The tool model shows higher accuracy in both it's overall prediction
+and the recall and precision scores. Although the difference is only a couple percent
+it is still notable.
